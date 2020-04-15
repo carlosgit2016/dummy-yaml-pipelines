@@ -1,7 +1,7 @@
 # trigger-pipe-usage.yml
 
 pool:
-    vmImage: 'ubuntu-latest'
+    vmImage: 'windows-latest'
 
 steps:
 - task: TriggerBuild@3
