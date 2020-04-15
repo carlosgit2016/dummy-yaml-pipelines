@@ -12,4 +12,11 @@ steps:
       SYSTEM_ACCESSTOKEN: $(System.AccessToken) 
   - script: echo The script could use $SYSTEM_ACCESSTOKEN SCRIPT
     env:
-      SYSTEM_ACESSTOKEN: $(System.AccessToken)
+      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+
+  - task: NodeJSRunner@0
+    inputs:
+      ScriptSource: Inline
+      InlineScript: console.log(process.env.SYSTEM_ACCESSTOKEN);
+    env:
+      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
