@@ -18,5 +18,3 @@ steps:
     inputs:
       ScriptSource: Inline
       InlineScript: console.log("$(System.AccessToken)");
-    env:
-      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
