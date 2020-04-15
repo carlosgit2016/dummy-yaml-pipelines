@@ -21,7 +21,7 @@ steps:
     downloadBuildArtifacts: false
     storeInEnvironmentVariable: false
     authenticationMethod: 'OAuth Token'
-    password: '$(System.AccessToken)'
+    password: $(System.AccessToken)
     enableBuildInQueueCondition: false
     dependentOnSuccessfulBuildCondition: false
     dependentOnFailedBuildCondition: false
