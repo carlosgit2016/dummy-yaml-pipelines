@@ -2,10 +2,13 @@
 
 pool:
   vmImage: 'ubuntu-latest'
-  
-- powershell |
-      write-host "Hello World"
+
+steps:
+- powershell: |
+      Write-Host "Hello World"
+
 - bash: |
       echo "Hello World"
-- script: | 
+
+- script: |
       echo "Hello World"
