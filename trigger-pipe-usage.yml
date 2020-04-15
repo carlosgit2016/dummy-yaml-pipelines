@@ -28,13 +28,17 @@ steps:
     checkbuildsoncurrentbranch: false
     failTaskIfConditionsAreNotFulfilled: false
 
+# $TRIGGEREDBUILDIDS variable environment (work on windows and linux)
+# $(TRIGGEREDBUILDIDS) Azure DevOps variable macro UPPERCASE | runtime (work on windows and linux)
+# $(TriggeredBuildIds) Azure DevOps variable macro | runtime (work on windows and linux)
 - bash: |
     echo $TriggeredBuildIds
-    echo number triggered build:  $TRIGGEREDBUILDIDS
+    echo number triggered build:  $TRIGGEREDBUILDIDS 
     echo number tr $(TRIGGEREDBUILDIDS)
     echo number tr $(TriggeredBuildIds)
-    env
-    
+
+# $($env:TriggeredBuildIds) environment system variable (work on windows)
+# $(TriggeredBuildIds) Azure DevOps variable macro | runtime (work on windows and linux)
 - powershell: |
     Write-Output "Fetching variable TriggeredBuildIds:"
     Write-Output "$($env:TriggeredBuildIds)"
