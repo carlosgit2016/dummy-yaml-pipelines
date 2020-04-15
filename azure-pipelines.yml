@@ -4,12 +4,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - bash: echo This script could use $SYSTEM_ACCESSTOKEN
+  - bash: echo This script could use $SYSTEM_ACCESSTOKEN BASH
     env:
       SYSTEM_ACCESSTOKEN: $(System.AccessToken)
-  - powershell: Write-Host "This is a script that could use $env:SYSTEM_ACCESSTOKEN"
+  - powershell: Write-Host "This is a script that could use $env:SYSTEM_ACCESSTOKEN" PS
     env:
       SYSTEM_ACCESSTOKEN: $(System.AccessToken) 
-  - script: echo The script could use $SYSTEM_ACCESSTOKEN
+  - script: echo The script could use $SYSTEM_ACCESSTOKEN SCRIPT
     env:
       SYSTEM_ACESSTOKEN: $(System.AccessToken)
