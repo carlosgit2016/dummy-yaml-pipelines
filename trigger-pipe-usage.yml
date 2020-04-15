@@ -1,1 +1,35 @@
 # trigger-pipe-usage.yml
+
+pool:
+    vmImage: 'ubuntu-latest'
+
+steps:
+- task: TriggerBuild@3
+  inputs:
+    definitionIsInCurrentTeamProject: true
+    buildDefinition: 'hello-world-dummy'
+    queueBuildForUserThatTriggeredBuild: true
+    ignoreSslCertificateErrors: true
+    useSameSourceVersion: false
+    useCustomSourceVersion: false
+    useSameBranch: true
+    waitForQueuedBuildsToFinish: true
+    waitForQueuedBuildsToFinishRefreshTime: '10'
+    failTaskIfBuildsNotSuccessful: true
+    cancelBuildsIfAnyFails: false
+    treatPartiallySucceededBuildAsSuccessful: false
+    downloadBuildArtifacts: false
+    storeInEnvironmentVariable: false
+    authenticationMethod: 'OAuth Token'
+    password: '$(System.AccessToken)'
+    enableBuildInQueueCondition: false
+    dependentOnSuccessfulBuildCondition: false
+    dependentOnFailedBuildCondition: false
+    checkbuildsoncurrentbranch: false
+    failTaskIfConditionsAreNotFulfilled: false
+
+- bash: |
+    echo $TriggeredBuildIds
+
+- powershell: |
+    write-host $env:TriggeredBuildIds
