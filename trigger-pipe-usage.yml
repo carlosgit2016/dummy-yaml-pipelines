@@ -1,7 +1,7 @@
 # trigger-pipe-usage.yml
 
 pool:
-    vmImage: 'windows-latest'
+    vmImage: 'ubuntu-latest'
 
 steps:
 - task: TriggerBuild@3
@@ -31,8 +31,11 @@ steps:
 - bash: |
     echo $TriggeredBuildIds
     echo number triggered build:  $TRIGGEREDBUILDIDS
+    echo number tr $(TRIGGEREDBUILDIDS)
+    echo number tr $(TriggeredBuildIds)
     env
     
 - powershell: |
     Write-Output "Fetching variable TriggeredBuildIds:"
     Write-Output "$($env:TriggeredBuildIds)"
+    Write-Output "$(TriggeredBuildIds)"
