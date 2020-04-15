@@ -1,0 +1,11 @@
+# Hello World Dummy Pipeline
+
+pool:
+  vmImage: 'ubuntu-latest'
+  
+- powershell |
+      write-host "Hello World"
+- bash: |
+      echo "Hello World"
+- script: | 
+      echo "Hello World"
