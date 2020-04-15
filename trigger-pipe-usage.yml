@@ -7,7 +7,7 @@ steps:
 - task: TriggerBuild@3
   inputs:
     definitionIsInCurrentTeamProject: true
-    buildDefinition: 'hello-world-dummy'
+    buildDefinition: 'hello world dummy'
     queueBuildForUserThatTriggeredBuild: true
     ignoreSslCertificateErrors: true
     useSameSourceVersion: false
