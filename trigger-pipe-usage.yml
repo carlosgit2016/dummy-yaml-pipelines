@@ -7,7 +7,7 @@ steps:
 - task: TriggerBuild@3
   inputs:
     definitionIsInCurrentTeamProject: true
-    buildDefinition: 'App Build CI'
+    buildDefinition: '25'
     queueBuildForUserThatTriggeredBuild: true
     ignoreSslCertificateErrors: true
     useSameSourceVersion: false
@@ -30,6 +30,8 @@ steps:
 
 - bash: |
     echo $TriggeredBuildIds
-
+    env
+    
 - powershell: |
-    write-host $env:TriggeredBuildIds
+    Write-Output "Fetching variable TriggeredBuildIds:"
+    Write-Output "$($env:TriggeredBuildIds)"
