@@ -30,6 +30,7 @@ steps:
 
 - bash: |
     echo $TriggeredBuildIds
+    echo number triggered build:  $TRIGGEREDBUILDIDS
     env
     
 - powershell: |
