@@ -4,4 +4,24 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- download: 'App Build CI'
+- task: DownloadPipelineArtifact@2
+  inputs:
+      definition: 'App Build CI'
+      buildType: specific
+      project: 'Ionic App'
+      artifactName: 'drop'
+      targetPath: ''
+      buildVersionToDownload: specific
+
+- task: DownloadPipelineArtifact@2
+  inputs:
+    buildType: 'specific'
+    project: 'Ionic App'
+    definition: 'App Build CI'
+    specificBuildWithTriggering: true
+    buildVersionToDownload: 'specific'
+    pipelineId: '$(Variable)'
+    artifactName: 'drop'
+    targetPath: '$(Build.BinariesDirectory)'
+    
+# - download: 'App Build CI'
