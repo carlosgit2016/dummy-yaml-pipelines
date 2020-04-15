@@ -1,6 +1,7 @@
 # download-pipe-artifacts.yml
 
-pool: 'ubuntu-latest'
+pool:
+  vmImage: 'ubuntu-latest'
 
 steps:
     - download: 'App Build CI'
