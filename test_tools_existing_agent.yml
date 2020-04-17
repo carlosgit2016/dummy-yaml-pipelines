@@ -1,5 +1,8 @@
 # A lot of kind of tools to test
 
+pool:
+    name: 'Default'
+
 # Test powershell
 steps:
 - powershell: 'write-host hello world'
