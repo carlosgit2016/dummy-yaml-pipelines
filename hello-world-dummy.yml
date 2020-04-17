@@ -1,7 +1,7 @@
 # Hello World Dummy Pipeline
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'Default'
 
 steps:
 - powershell: |
