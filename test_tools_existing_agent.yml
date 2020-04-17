@@ -1,1 +1,19 @@
 # A lot of kind of tools to test
+
+# Test powershell
+steps:
+- powershell: 'write-host hello world'
+# Test bash
+- bash: 'echo hello world'
+# Test CmdLine
+- script: 'echo hello world'
+# Test node
+- bash: 'node -v'
+# Test npm
+- bash: 'npm -v'
+# Test maven
+- bash: 'maven -version'
+# Test JAVA
+- bash: 'java -version && javac -version'
+# Print env
+- bash: 'env'
