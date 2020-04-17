@@ -4,8 +4,8 @@ pool:
   name: 'Default'
 
 steps:
-- powershell: |
-      Write-Host "Hello World"
+# - powershell: |
+#       Write-Host "Hello World"
 
 - bash: |
       echo "Hello World"
