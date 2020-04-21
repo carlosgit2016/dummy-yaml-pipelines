@@ -1,0 +1,7 @@
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- bash: |
+      sudo apt-get install lib32z1
+  displayName: 'Installing whoever lib'
