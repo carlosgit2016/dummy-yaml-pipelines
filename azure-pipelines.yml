@@ -8,5 +8,7 @@ variables:
   BUILD_ID: $(Build.BuildNumber)
 
 steps:
-  - powershell: |
+- checkout: none
+
+- powershell: |
       echo $env:Versao; $env:BUILD_ID
