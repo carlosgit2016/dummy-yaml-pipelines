@@ -4,6 +4,7 @@ pr: none
 pool:
   vmImage: 'windows-latest'
 
-- powershell: |
-    $env:Versao = "$(version)"
-    $env:BUILD_ID = "$(Build.BuildNumber)"
+steps:
+  - powershell: |
+      $env:Versao = "$(version)"
+      $env:BUILD_ID = "$(Build.BuildNumber)"
