@@ -9,4 +9,3 @@ steps:
   - checkout: none
   - powershell: |
         echo "##vso[build.addbuildtag]alpha"
-        echo "##vso[build.addbuildtag]beta"
