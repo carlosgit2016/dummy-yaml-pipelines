@@ -6,5 +6,6 @@ pool:
 
 # Build tags example
 steps:
+  - checkout: none
   - powershell: |
         echo "##vso[build.addbuildtag]0.0.2"
