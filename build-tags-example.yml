@@ -8,4 +8,4 @@ pool:
 steps:
   - checkout: none
   - powershell: |
-        echo "##vso[build.addbuildtag]0.0.2"
+        echo "##vso[build.addbuildtag]0.0.3"
