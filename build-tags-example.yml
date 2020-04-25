@@ -1,4 +1,4 @@
-trigger: none
+trigger: [ 'master' ]
 pr: none
 
 pool:
@@ -7,4 +7,4 @@ pool:
 # Build tags example
 steps:
   - powershell: |
-        echo "Tags examples"
+        echo "##vso[build.addbuildtag]0.0.2"
