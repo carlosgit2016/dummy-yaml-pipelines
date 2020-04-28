@@ -7,7 +7,7 @@ steps:
 - task: TriggerBuild@3
   inputs:
     definitionIsInCurrentTeamProject: true
-    buildDefinition: '25'
+    buildDefinition: '29'
     queueBuildForUserThatTriggeredBuild: true
     ignoreSslCertificateErrors: true
     useSameSourceVersion: false
