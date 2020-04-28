@@ -1,9 +1,11 @@
 # trigger-pipe-usage.yml
-
+trigger: none
+pr: none
 pool:
     vmImage: 'ubuntu-latest'
 
 steps:
+- checkout: none
 - task: TriggerBuild@3
   inputs:
     definitionIsInCurrentTeamProject: true
