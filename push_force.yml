@@ -15,4 +15,5 @@ steps:
         echo "hello world" > newfile.log
         git add .
         git commit -m "dummy commit"
+        git push -u origin HEAD:master
         git status
