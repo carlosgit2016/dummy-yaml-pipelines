@@ -1,20 +1,11 @@
-# Push Force Test
-
 trigger: none
 pr: none
 
-resources:
-    repositories:
-        - repository: dummy
-          name: DummyProject
-
 pool:
-    vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
 
+# Build tags example
 steps:
-    - checkout: dummy
-    - bash: |
-        echo "HelloWorld" > newfile.log
-        git add .
-        git commit -m "new File"
-        git push origin master
+  - checkout: DummyProject
+  - bash: |
+        git status
