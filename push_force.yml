@@ -4,6 +4,7 @@ resources:
     repositories:
         - repository: dummy
           name: DummyProject
+          type: git
 pool:
   vmImage: ubuntu-latest
 
