@@ -12,4 +12,7 @@ pool:
 steps:
   - checkout: dummy
   - bash: |
+        echo "hello world" > newfile.log
+        git add .
+        git commit -m "dummy commit"
         git status
