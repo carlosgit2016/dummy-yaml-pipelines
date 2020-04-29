@@ -1,1 +1,17 @@
 # Push Force Test
+
+trigger: none
+pr: none
+
+resources:
+    repositories:
+        - repository: dummy
+          name: DummyProject
+
+steps:
+    - checkout: dummy
+    - bash: |
+        echo "HelloWorld" > newfile.log
+        git add .
+        git commit -m "new File"
+        git push origin master
