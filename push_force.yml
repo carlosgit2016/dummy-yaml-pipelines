@@ -1,11 +1,14 @@
 trigger: none
 pr: none
-
+resources:
+    repositories:
+        - repository: dummy
+          name: DummyProject
 pool:
   vmImage: ubuntu-latest
 
 # Build tags example
 steps:
-  - checkout: DummyProject
+  - checkout: dummy
   - bash: |
         git status
