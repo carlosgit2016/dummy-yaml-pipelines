@@ -7,3 +7,6 @@ pr:
   branches:
     include:
         - release/*
+
+steps:
+  - bash: echo "Hello World"
