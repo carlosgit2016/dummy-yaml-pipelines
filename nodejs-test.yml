@@ -7,6 +7,6 @@ steps:
   - task: NodeJSRunner@0
     inputs:
       ScriptSource: Inline
-      InlineScript: 'console.log("Hello World")'
-  - pwsh: |
-        write "Hello world"
+      InlineScript: |
+        console.log("Hello World")
+        console.debug("Hello World")
