@@ -8,3 +8,5 @@ steps:
     inputs:
       ScriptSource: Inline
       InlineScript: 'console.log("Hello World")'
+  - pwsh: |
+        write "Hello world"
