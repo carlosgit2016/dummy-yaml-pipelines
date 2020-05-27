@@ -1,0 +1,21 @@
+trigger: none
+pr: none
+
+variables:
+    pipelineScopeVariable: "[MyProject] - VSTS -"
+
+steps:
+
+# Append variable string test
+
+  - powershell: |
+        write "##vso[task.setvariable variable=subject]testValue"
+        write $(subject)
+        write $env:subject
+  - powershell: | 
+        write $(subject)
+        write $env:subject
+        write-output $env:subject
+        write-output $(subject)
+  - powershell: write $(subject)
+  - powershell: write-output $(subject)
