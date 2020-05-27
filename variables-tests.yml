@@ -9,7 +9,7 @@ steps:
 - checkout: none
 # Append variable string test
 
-- powershell: write "##vso[task.setvariable variable=subject]testValue"
+- powershell: write-output "##vso[task.setvariable variable=subject]testValue"
         
 - powershell: | 
       write $(subject)
