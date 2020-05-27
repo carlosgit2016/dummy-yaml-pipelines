@@ -15,6 +15,5 @@ steps:
 - powershell: | 
       write-output "$(subject)" $(subject)
       write-output "$env:subject" $env:subject
-      (gci Env:).Value.Split(";")
-- powershell: write-output $(subject)
+      gci Env:
 - powershell: write-output $(subject)
