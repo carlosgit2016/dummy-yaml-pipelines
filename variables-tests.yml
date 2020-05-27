@@ -14,7 +14,8 @@ steps:
         
 - powershell: | 
       write-output "form 1" $(subject)
-      write-output "form 2" $env:subject
+      write-output "form 2"
+      write-output $env:SUBJECT
       gci Env:
 
 - powershell: |
