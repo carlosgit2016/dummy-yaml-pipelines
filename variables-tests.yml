@@ -13,7 +13,7 @@ steps:
 - powershell: write-output "##vso[task.setvariable variable=subject]testValue"
         
 - powershell: | 
-      write-output "$(subject)" $(subject)
-      write-output "$env:subject" $env:subject
+      write-output '$(subject)' $(subject)
+      write-output '$env:subject' $env:subject
       gci Env:
 - powershell: write-output $(subject)
