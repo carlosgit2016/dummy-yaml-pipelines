@@ -12,9 +12,9 @@ steps:
 - powershell: write-output "##vso[task.setvariable variable=subject]testValue"
         
 - powershell: | 
-      write $(subject)
-      write $env:subject
+      write-output $(subject)
+      write-output $env:subject
       write-output $env:subject
       write-output $(subject)
-- powershell: write $(subject)
+- powershell: write-output $(subject)
 - powershell: write-output $(subject)
