@@ -10,8 +10,7 @@ steps:
 
   - powershell: |
         write "##vso[task.setvariable variable=subject]testValue"
-        write $(subject)
-        write $env:subject
+        
   - powershell: | 
         write $(subject)
         write $env:subject
