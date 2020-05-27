@@ -16,5 +16,11 @@ steps:
       write-output "form 1" $(subject)
       write-output "form 2" $env:subject
       gci Env:
-      
-- powershell: write-output $(subject)
+
+- powershell: |
+        $pipelineScopeVariable = $env:PIPELINESCOPEVARIABLE + "MYtaG-1.0"
+        write-output "##vso[task.setvariable variable=pipelineScopeVariable]$pipelineScopeVariable"
+        write-output $(pipelineScopeVariable)
+
+- powershell: write-output $(pipelineScopeVariable)
+        
