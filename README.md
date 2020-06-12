@@ -1,6 +1,2 @@
 # dummy-yaml-pipelines
-Hold dummy pipelines created to test
-
-# Test Area:
-
-Test 1 commit
+Hold dummy pipelines created to test, all scripts are separeted by description
