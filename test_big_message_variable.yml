@@ -6,9 +6,9 @@ pool:
 
 steps:
 
-- powershell: |
-      $deployDate = date -format 'dd/MM/yyy'
-      write-output "##vso[task.setvariable variable=deployDate]$deployDate"
+- pwsh: |
+      $deployDate = date -format 'dd/MM/yyy';
+      write-output "##vso[task.setvariable variable=deployDate]$deployDate";
       write-output '##vso[task.setvariable variable=message]<!DOCTYPE html><html><head><meta charset="utf-8"><title>Atenção:.md</title><style></style></head><body id="preview">
       <h1 class="code-line" data-line-start=0 data-line-end=1><a id="Ateno_0"></a>Atenção:</h1>
       <p class="has-line-data" data-line-start="2" data-line-end="3">O código de produção foi atualizado no VSTS após Deploy, realizado hoje ($deployDate).</p>
