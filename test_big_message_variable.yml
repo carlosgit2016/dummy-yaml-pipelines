@@ -20,5 +20,5 @@ steps:
   displayName: define message
 
 - powershell: |
-      echo $deployDate
-      echo $message
+      echo $env:DEPLOYDATE
+      echo $env:MESSAGE -replace "\r\n|\r|\n/gm"
