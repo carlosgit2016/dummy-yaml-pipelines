@@ -16,10 +16,10 @@ steps:
       <h4 class="code-line" data-line-start=6 data-line-end=7><a id="Favor_realizar_o_pull_nos_branches_em_andamento_de_vocs_6"></a>Favor realizar o alinhamento das branches em andamento com a ultima atualização da master.</h4>
       <blockquote><p class="has-line-data" data-line-start="8" data-line-end="9">Nota: Essa é uma mensagem automatica favor não responder</p>
       </blockquote>
-      </body></html>';
+      </body></html>' -replace "\r\n|\r|\n/gm";
       write-output '##vso[task.setvariable variable=message]$mailBody'
   displayName: define mailBody
 
 - powershell: |
       echo $env:DEPLOYDATE
-      write-output ($env:MAILBODY -replace "\r\n|\r|\n/gm")
+      write-output $env:MAILBODY;
