@@ -17,7 +17,7 @@ steps:
       <blockquote><p class="has-line-data" data-line-start="8" data-line-end="9">Nota: Essa é uma mensagem automatica favor não responder</p>
       </blockquote>
       </body></html>' -replace "\r\n|\r|\n/gm";
-      write-output '##vso[task.setvariable variable=message]$mailBody'
+      write-output '##vso[task.setvariable variable=mailBody]$mailBody'
   displayName: define mailBody
 
 - powershell: |
