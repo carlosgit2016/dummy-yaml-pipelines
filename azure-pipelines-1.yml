@@ -1,0 +1,11 @@
+trigger: none
+pr: none
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeJSRunner@0
+  inputs:
+    inlineScript: console.log("Hello World")
+    scriptSource: Inline
