@@ -7,5 +7,7 @@ pool:
 steps:
 - task: NodeJSRunner@0
   inputs:
-    inlineScript: console.log("Hello World")
+    inlineScript: |
+        const n = 10;
+        n = 10;
     scriptSource: Inline
